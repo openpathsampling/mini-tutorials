@@ -24,14 +24,14 @@ them in [the playlist for this tutorial](), or you can watch each part:
 
 This tutorial requires OpenPathSampling 1.4 or later and the OpenPathSampling
 CLI 0.2 or later. In addition, it requires OpenMM and OpenMMTools. Finally,
-SQLAlchemy must be installed for SimStore to work.
+SQLAlchemy and dill must be installed for SimStore to work.
 
 Install the requirements with:
 
 ```bash
 conda install -c conda-forge openpathsampling openpathsampling-cli
-conda install -c conda-forge -c omnia openmm openmmtools
-conda install -c conda-forge sqlalchemy
+conda install -c conda-forge openmm openmmtools
+conda install -c conda-forge sqlalchemy dill
 ```
 
 In addition, you will need about ??? GB of disk space available.
@@ -45,6 +45,6 @@ keeping a separate terminal open on your system.
 
 The tutorial can also be run on Binder, via its JupyterLab interface. 
 
-The setup process is described in the notebook `01_simstore_setup.ipynb`. The
-process of using the CLI is described in `02_running_cli.md`. The analysis is performed
-in `03_analysis.ipynb`.
+The setup process is described in the notebook `1_simstore_setup.ipynb`. The
+process of using the CLI is described in `2_running_cli.md`. The analysis is performed
+in `3_analysis.ipynb`.
