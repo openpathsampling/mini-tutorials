@@ -22,7 +22,7 @@ them in [the playlist for this tutorial](), or you can watch each part:
 
 ## Requirements
 
-This tutorial requires OpenPathSampling 1.4 or later and the OpenPathSampling
+This tutorial requires OpenPathSampling 1.5 or later and the OpenPathSampling
 CLI 0.2 or later. In addition, it requires OpenMM and OpenMMTools. Finally,
 SQLAlchemy and dill must be installed for SimStore to work.
 
