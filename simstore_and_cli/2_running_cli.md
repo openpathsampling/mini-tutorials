@@ -51,7 +51,10 @@ command:
 openpathsampling contents setup.db
 ```
 
-This will provide information about the objects stored in that file.
+This will provide information about the objects stored in that file. This can
+also be useful if something goes wrong while you're running the tutorial: if
+you can't load up an object by the name given here, check the contents of the
+file and see if perhaps you spelled the name differently.
 
 ## Overview
 
@@ -143,6 +146,10 @@ ensembles in our setup file. Noting that the ensemble name should be in quotes
 ```bash
 openpathsampling md setup.db -o minus-traj.db -e engine -f -1 --ensemble "condensed MIS minus"
 ```
+
+Note that sometimes this extension doesn't work -- if you recross into the
+extended state, you're likely to get an error when the engine hits its maximum
+length. If that happens, retrying this step a few times usually works.
 
 We can then copy the resulting trajectory to `setup.db` with
 
