@@ -12,6 +12,5 @@ subject of screencasts on the OPS YouTube channel.
   command line interface (CLI) and shows how to use SimStore, our new storage
   subsystem, in OPS 1.x.  (SimStore will become the default storage in OPS
   2.0.) This tutorial uses these tools to set up and run a simple TIS
-  simulation, and then analyze the results. Requirements: OpenPathSampling 1.4
-  or later; OpenPathSampling CLI
-  0.2 or later.
+  simulation, and then analyze the results. Requirements: OpenPathSampling 1.5
+  or later; OpenPathSampling CLI 0.2 or later.

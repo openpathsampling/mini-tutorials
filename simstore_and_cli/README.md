@@ -14,9 +14,9 @@ In OPS 2.0, NetCDFPlus will be removed and SimStore will be used for all storage
 ## Videos
 
 This tutorial was presented as a series of three YouTube videos. You can watch
-them in [the playlist for this tutorial](), or you can watch each part:
+them in the playlist for this tutorial [COMING SOON], or you can watch each part:
 
-* [Part 1: Setting up with SimStore]()
+* [Part 1: Setting up with SimStore](https://www.youtube.com/watch?v=IAipZfZpwZ4)
 * COMING SOON: Part 2: Running simulations with the CLI
 * COMING SOON: Part 3: Analyzing the results
 
@@ -34,7 +34,7 @@ conda install -c conda-forge openmm openmmtools
 conda install -c conda-forge sqlalchemy dill
 ```
 
-In addition, you will need about ??? GB of disk space available.
+In addition, you will need about 500 MB of disk space available.
 
 ## Running the tutorial
 
