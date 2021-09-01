@@ -8,6 +8,8 @@ dependencies:
   - openmmtools
   - openmm
   - tqdm
+  - dill
+  - sqlalchemy
   - openpathsampling
   - openpathsampling-cli
 prefix: /Users/dwhs/miniconda3/envs/mini-tutorials
