@@ -17,7 +17,7 @@ This tutorial was presented as a series of three YouTube videos. You can watch
 them in the playlist for this tutorial [COMING SOON], or you can watch each part:
 
 * [Part 1: Setting up with SimStore](https://www.youtube.com/watch?v=IAipZfZpwZ4)
-* [Running simulations with the CLI](https://www.youtube.com/watch?v=VGN-NfuZGqY)
+* [Part 2: Running simulations with the CLI](https://www.youtube.com/watch?v=VGN-NfuZGqY)
 * COMING SOON: Part 3: Analyzing the results
 
 ## Requirements
