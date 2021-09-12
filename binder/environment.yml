@@ -1,0 +1,15 @@
+name: mini-tutorials
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter
+  - nglview
+  - openmmtools
+  - openmm
+  - tqdm
+  - dill
+  - sqlalchemy
+  - openpathsampling
+  - openpathsampling-cli
+prefix: /Users/dwhs/miniconda3/envs/mini-tutorials
