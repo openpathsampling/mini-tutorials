@@ -1,0 +1,81 @@
+engines: 
+  - type: openmm
+    name: ad_engine
+    system: system.xml
+    integrator: integrator.xml
+    topology: ad.pdb
+    n_steps_per_frame: 10
+    n_frames_max: 10000
+
+cvs:
+  - name: phi
+    type: mdtraj
+    topology: ad.pdb
+    func: compute_dihedrals
+    period_min: -np.pi
+    period_max: np.pi
+    kwargs:
+      atom_indices: [[4, 6, 8, 14]]
+
+  # YOUR TURN: create a CV for psi
+  - name: psi
+    type: mdtraj
+    topology: ad.pdb
+    func: compute_dihedrals
+    period_min: -np.pi
+    period_max: np.pi
+    kwargs:
+      atom_indices: [[6, 8, 14, 16]]
+
+states:
+  - name: C_7eq
+    type: intersection
+    subvolumes:
+      - type: cv-volume
+        cv: psi
+        lambda_min: 100 * np.pi / 180
+        lambda_max: 200 * np.pi / 180
+      - type: cv-volume
+        cv: phi
+        lambda_min: -np.pi
+        lambda_max: 0.0
+
+  # YOUR TURN: create the a state for alpha_R
+  - name: alpha_R
+    type: intersection
+    subvolumes:
+      - type: cv-volume
+        cv: psi
+        lambda_min: -100 * np.pi / 180
+        lambda_max: 0.0
+      - type: cv-volume
+        cv: phi
+        lambda_min: -np.pi
+        lambda_max: 0.0
+
+networks:
+  - type: tps
+    name: tps-network
+    initial_states:
+      - C_7eq
+    final_states:
+      - alpha_R
+
+schemes:
+  - type: one-way-shooting
+    name: uniform-shooting-scheme
+    network: tps-network
+    engine: ad_engine
+
+  # YOUR TURN: make another move scheme with a Gaussian shooting point
+  # selector. Use psi as the CV for it, and put the mean at 50 degrees, with
+  # a standard deviation of 10 degrees.
+  - type: one-way-shooting
+    name: biased-shooting-scheme
+    network: tps-network
+    selector:
+      type: gaussian
+      cv: psi
+      mean: 50 * np.pi / 180
+      stddev: 10 * np.pi / 180
+    engine: ad_engine
